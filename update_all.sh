@@ -18,15 +18,20 @@ update_submodule() {
     (
         cd $1
         git fetch upstream
+        git checkout main
+        git reset --hard upstream/main
+        git push origin main --force
+        git checkout private-comments
         git rebase upstream/main
-        git push origin main
+        git push origin private-comments --force
+        pip install -e .
     )
 }
 
 # Pull changes from the remote repository
 git pull origin main
 
-# Update all submodules
+# Update submodules in the specified order
 update_submodule pymc
 update_submodule blackjax
 update_submodule pymc-experimental
