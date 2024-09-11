@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# function to update a submodule
+# Function to update a submodule
 update_submodule() {
     echo "Updating $1..."
     cd $1
@@ -10,12 +10,18 @@ update_submodule() {
     cd ..
 }
 
-# update all submodules
+# Navigate to the project root directory
+cd ~/projects/pymc-devs
+
+# Pull changes from the remote repository
+git pull origin main
+
+# Update all submodules
 update_submodule pymc
 update_submodule blackjax
 update_submodule pymc-experimental
 
-# update the main repository
+# Update the main repository
 git add .
 git commit -m "Update submodules"
 git push origin main
