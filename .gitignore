@@ -1,0 +1,11 @@
+# ignore everything
+*
+
+# don't ignore these directories
+!/pymc/
+!/blackjax/
+!/pymc-experimental/
+
+# dont't ignore .gitignore and the update script
+!.gitignore
+!update_all.sh
