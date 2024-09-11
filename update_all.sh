@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Ensure we are in the correct directory                                                                                                                                                                 
+if [[ "$(pwd)" != "$HOME/projects/pymc-devs" ]]; then                                                                                                                                                      
+    echo "Error: This script must be run from ~/projects/pymc-devs"                                                                                                                                        
+    exit 1   
+fi
+
 set -e  # Exit immediately if a command exits with a non-zero status.
 
 # Function to update a submodule
@@ -11,9 +17,6 @@ update_submodule() {
     git push origin main
     cd ..
 }
-
-# Navigate to the project root directory
-cd ~/projects/pymc-devs
 
 # Pull changes from the remote repository
 git pull origin main

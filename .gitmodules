@@ -1,9 +1,9 @@
 [submodule "blackjax"]
 	path = blackjax
-	url = https://github.com/aphc14/blackjax.git
+	url = git@github.com:aphc14/blackjax.git
 [submodule "pymc"]
 	path = pymc
-	url = https://github.com/aphc14/pymc.git
+	url = git@github.com:aphc14/pymc.git
 [submodule "pymc-experimental"]
 	path = pymc-experimental
-	url = https://github.com/aphc14/pymc-experimental.git
+	url = git@github.com:aphc14/pymc-experimental.git
